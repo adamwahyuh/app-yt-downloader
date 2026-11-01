@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Panah ke bawah di atas garis: simbol "sedot/unduh" -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M49,32h10v24h11L54,72 38,56h11z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,76h36v6h-36z" />
+</vector>

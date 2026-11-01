@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/LargeTitle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Youder" />
+
+            <ImageButton
+                android:id="@+id/settings"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Pengaturan"
+                android:src="@drawable/ic_settings"
+                android:tint="@color/accent" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Unduh video &amp; musik dari YouTube"
+            android:textColor="@color/label2"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/SectionLabel"
+            android:text="LINK" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="4dp">
+
+            <EditText
+                android:id="@+id/url"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Tempel link YouTube"
+                android:importantForAutofill="no"
+                android:inputType="textUri"
+                android:singleLine="true"
+                android:textColor="@color/label"
+                android:textColorHint="@color/label2"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/paste"
+                style="@style/TextButton"
+                android:text="Tempel" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/SectionLabel"
+            android:text="FORMAT" />
+
+        <RadioGroup
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_segment"
+            android:checkedButton="@+id/video"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <RadioButton
+                android:id="@+id/video"
+                style="@style/Segment"
+                android:text="Video · MP4" />
+
+            <RadioButton
+                android:id="@+id/audio"
+                style="@style/Segment"
+                android:text="Audio · MP3" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/SectionLabel"
+            android:text="KUALITAS" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RadioGroup
+                android:id="@+id/quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <TextView
+            style="@style/SectionLabel"
+            android:text="SIMPAN KE" />
+
+        <LinearLayout
+            android:id="@+id/folder_row"
+            style="@style/Row"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_folder"
+                android:tint="@color/accent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/folder"
+                    style="@style/RowTitle"
+                    android:singleLine="true"
+                    android:ellipsize="start" />
+
+                <TextView
+                    style="@style/RowSubtitle"
+                    android:text="Ketuk untuk memilih folder lain" />
+            </LinearLayout>
+
+            <TextView style="@style/Chevron" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/download"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="28dp"
+            android:text="Download" />
+
+        <LinearLayout
+            android:id="@+id/job_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/job_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="2"
+                android:textColor="@color/label"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/job_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/label2"
+                android:textSize="15sp" />
+
+            <ProgressBar
+                android:id="@+id/job_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="14dp"
+                android:indeterminateTint="@color/accent"
+                android:max="100"
+                android:progressDrawable="@drawable/progress" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="end">
+
+                <Button
+                    android:id="@+id/job_close"
+                    style="@style/TextButton"
+                    android:text="Tutup"
+                    android:textColor="@color/label2" />
+
+                <Button
+                    android:id="@+id/job_action"
+                    style="@style/TextButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

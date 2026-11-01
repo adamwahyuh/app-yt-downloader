@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ikon "slider" pengaturan -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="26dp"
+    android:height="26dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M3,7h18v1.8H3z M3,15.2h18v1.8H3z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M5.6,7.9a3,3 0,1 0,6 0a3,3 0,1 0,-6 0z M12.4,16.1a3,3 0,1 0,6 0a3,3 0,1 0,-6 0z" />
+</vector>

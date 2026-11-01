@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/back"
+            style="@style/TextButton"
+            android:layout_marginStart="-12dp"
+            android:text="‹  Kembali" />
+
+        <TextView
+            style="@style/LargeTitle"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Pengaturan" />
+
+        <TextView
+            style="@style/SectionLabel"
+            android:text="LOKASI SIMPAN DEFAULT" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/video_row"
+                style="@style/Row">
+
+                <TextView
+                    style="@style/RowTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Video" />
+
+                <TextView
+                    android:id="@+id/video_folder"
+                    style="@style/RowValue" />
+
+                <TextView style="@style/Chevron" />
+            </LinearLayout>
+
+            <View style="@style/Separator" />
+
+            <LinearLayout
+                android:id="@+id/audio_row"
+                style="@style/Row">
+
+                <TextView
+                    style="@style/RowTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Audio" />
+
+                <TextView
+                    android:id="@+id/audio_folder"
+                    style="@style/RowValue" />
+
+                <TextView style="@style/Chevron" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:text="Folder ini dipakai otomatis setiap download. Anda tetap bisa memilih folder lain di layar utama sebelum menekan Download."
+            android:textColor="@color/label2"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/reset_row"
+            style="@style/Row"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                style="@style/RowTitle"
+                android:text="Kembalikan ke default"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:text="Default: Download/Youder untuk video, Music/Youder untuk audio."
+            android:textColor="@color/label2"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>
